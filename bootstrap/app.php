@@ -19,8 +19,12 @@ $app = Application::configure(basePath: dirname(__DIR__))
     })
     ->create();
 
-if (env('VERCEL', false)) {
-    $app->useStoragePath('/tmp/storage');
+if (env('VERCEL')) {
+    $tmpStorage = '/tmp/storage';
+    @mkdir("$tmpStorage/framework/cache/data", 0777, true);
+    @mkdir("$tmpStorage/framework/views", 0777, true);
+    @mkdir("$tmpStorage/framework/sessions", 0777, true);
+    $app->useStoragePath($tmpStorage);
 }
 
 return $app;
