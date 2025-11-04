@@ -6,19 +6,15 @@
     }
   },
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/index.php"
-    }
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ],
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "false",
-    "APP_KEY": "base64:YOUR_APP_KEY_HERE",
     "APP_URL": "https://new-tuto.vercel.app",
     "CACHE_DRIVER": "array",
-    "LOG_CHANNEL": "stderr",
     "SESSION_DRIVER": "cookie",
+    "LOG_CHANNEL": "stderr",
     "VIEW_COMPILED_PATH": "/tmp"
   }
 }
