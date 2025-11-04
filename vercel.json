@@ -8,10 +8,7 @@
     }
   },
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
-    }
+        { "src": "/(.*)", "dest": "public/index.php" }
   ],
   "env": {
     "APP_ENV": "production",
